@@ -1,0 +1,176 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+
+		</style>
+  </head>
+  <body>
+	
+<div class="min-h-screen flex overflow-hidden">
+	<div class="w-64 bg-secondary text-secondary-foreground p-4 fixed h-full">
+		<div class="mb-6">
+		  <img src="#" alt="Company logo" class="w-12 h-12" />
+		  <h2 class="text-lg font-bold mt-2">Sidebar</h2>
+		</div>
+		<ul>
+		  <li><a href="#" class="block py-2 px-4 hover:bg-secondary/80 transition-colors duration-200">Link 1</a></li>
+		  <li><a href="#" class="block py-2 px-4 hover:bg-secondary/80 transition-colors duration-200">Link 2</a></li>
+		  <li><a href="#" class="block py-2 px-4 hover:bg-secondary/80 transition-colors duration-200">Link 3</a></li>
+		</ul>
+	  </div>
+	
+	
+	<div class="flex-1 flex flex-col items-center justify-center bg-background text-foreground p-4 ml-64">
+
+	<div class="flex-1 flex flex-col items-center justify-center bg-background text-foreground p-4 ml-64"></div>
+	<div class="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-4">
+	<div class="text-center mb-8">
+		<h1 class="text-3xl font-bold">Where knowledge begins</h1>
+	</div>
+	<div class="w-full max-w-xl">
+		<div class="relative">
+		<input type="text" placeholder="Ask anything..." class="w-full p-4 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+		<div class="absolute right-4 top-4 flex items-center space-x-2">
+			<button class="bg-primary text-primary-foreground p-2 rounded-lg hover:bg-primary/80">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+				<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+			</svg>
+			</button>
+		</div>
+		</div>
+		<div class="mt-4 grid grid-cols-2 gap-4">
+		<div class="flex items-center p-4 bg-accent rounded-lg hover:bg-accent/80 transition-all duration-300">
+			<img aria-hidden="true" alt="music-icon" src="https://openui.fly.dev/openui/24x24.svg?text=" class="mr-2" />
+			<a href="https://www.youtube.com/results?search_query=Upcoming+music+festivals" class="text-accent-foreground hover:underline">Upcoming music festivals</a>
+		</div>
+		<div class="flex items-center p-4 bg-accent rounded-lg hover:bg-accent/80 transition-all duration-300">
+			<img aria-hidden="true" alt="meditation-icon" src="https://openui.fly.dev/openui/24x24.svg?text=" class="mr-2" />
+			<a href="https://www.youtube.com/results?search_query=Meditation+techniques+in+2024" class="text-accent-foreground hover:underline">Meditation techniques in 2024</a>
+		</div>
+		<div class="flex items-center p-4 bg-accent rounded-lg hover:bg-accent/80 transition-all duration-300">
+			<img aria-hidden="true" alt="brands-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🛍️" class="mr-2" />
+			<a href="https://www.youtube.com/results?search_query=Brands+similar+to+Lululemon" class="text-accent-foreground hover:underline">Brands similar to Lululemon</a>
+		</div>
+		<div class="flex items-center p-4 bg-accent rounded-lg hover:bg-accent/80 transition-all duration-300">
+			<img aria-hidden="true" alt="ai-icon" src="https://openui.fly.dev/openui/24x24.svg?text=" class="mr-2" />
+			<a href="https://www.youtube.com/results?search_query=What+is+Perplexity+AI%3F" class="text-accent-foreground hover:underline">What is Perplexity AI?</a>
+		</div>
+		</div>
+		<div class="w-full max-w-2xl mt-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			  <div class="bg-card p-4 rounded-lg shadow-lg">
+				<iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  </div>
+			  <div class="bg-card p-4 rounded-lg shadow-lg">
+				<iframe width="100%" height="200" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  </div>
+			</div>
+		  </div>
+	
+	</div>
+	</div>
+	{% extends 'base.html' %}
+
+{% block title %}PLANB{% endblock %}
+
+{% block content %}
+    <h1>PLANB</h1>
+    <p>Welcome, {{ current_user.username }}!</p>
+{% endblock %}
+
+  </body>
+</html>
